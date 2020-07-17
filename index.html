@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TypeWriter Animation Custom Script</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="TypeWriter Animation Custom lightweight Script ">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Maddy Arora">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .typewriterCustom {
+            width: 780px;
+            font-family: sans-serif;
+            margin: 0px auto;
+            padding-top: 10em;
+        }
+
+        .typewriterCustom h1 {
+            overflow: hidden;
+            /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange;
+            /* The typwriter cursor */
+            white-space: nowrap;
+            /* Keeps the content on a single line */
+            margin: 0 auto;
+            /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .20em;
+            /* Adjust as needed */
+            animation:
+                typing 6s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: orange;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="typewriterCustom">
+        <h1>TypeWriter Custom Animation Script</h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        setInterval(function () {
+            $('.typewriterCustom').trigger('click');
+        }, 8000);
+
+        $('.typewriterCustom').click(function () {
+            const el = $(this),
+                newone = el.clone(true);
+            el.before(newone);
+            $("." + el.attr("class") + ":last").remove();
+        })
+    </script>
+</body>
+
+</html>
