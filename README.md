@@ -2,4 +2,4 @@
 TypeWriter Animation Custom lightweight Script
 
 
-Demo - 
+Demo - https://unlockcoding.com/TypeScript/
