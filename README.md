@@ -2,4 +2,4 @@
 TypeWriter Animation Custom lightweight Script
 
 
-Demo - https://unlockcoding.com/TypeScript/
+Demo - https://type-writer-animation-custom-script.vercel.app/
